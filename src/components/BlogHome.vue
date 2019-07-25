@@ -26,53 +26,53 @@ export default {
 </script>
 
 <template>
-<!--
-  <div id="post">
-    <section class="section">
-      <div class="container is-fullhd" v-for="(post,index) in posts" :key="post.slug + '_' + index">
-        <router-link :to="'/blog/' + post.slug">
-          <h3>{{ post.title }}</h3>
-          {{ post.summary }}
-          <br />
-        </router-link>
-      </div>
-    </section>
-  </div> -->
-<tbody>
-  <section class="section">
-    <div class="tile is-ancestor" v-for="(post,index) in posts" :key="post.slug + '_' + index">
-      <div class="tile is-vertical is-3 "></div>
-      <div class="tile is-vertical is-6 ">
-          <div class="tile is-parent">
-            <article class="tile is-child box">
-              <p class="title is-4">{{ post.title }}</p>
+  <div class="container">
+    <div id="flow">
+      <span class="flow-1"></span>
+      <span class="flow-2"></span>
+      <span class="flow-3"></span>
+    </div>
 
-              <figure class="image is-48x48">
-                 <img :src="post.author.profile_image"> 
-              </figure> 
-              <p class="subtitle is-6">{{'Por: ' + post.author.first_name + ' ' + post.author.last_name}}</p>
-
-              <div class="content">
-                <p>{{ post.summary }}</p>
+    <div class="section">
+      <div class="row columns is-multiline">
+        <div  class="column is-one-third" v-for="(post,index) in posts" :key="post.slug + '_' + index">
+          <div class="card large">
+            <div class="card-image">
+              <figure class="image">
+                <img :src="post.featured_image" />
+              </figure>
+            </div>
+            <router-link :to="'/blog/' + post.slug">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img class="is-rounded" :src="post.author.profile_image" alt="Image" />
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p
+                      class="title is-4 no-padding"
+                    >{{post.author.first_name + ' ' + post.author.last_name}}</p>
+                    <p>
+                      <span class="title is-6">
+                        <a href="http://twitter.com/#">@maxmelodia</a>
+                      </span>
+                    </p>
+                    <p class="subtitle is-6">{{post.published}}</p>
+                  </div>
+                </div>
+                <div class="content">
+                  {{ post.summary }}
+                  <div class="background-icon">
+                    <span class="icon-twitter"></span>
+                  </div>
+                </div>
               </div>
-            </article>
+            </router-link>
           </div>
+        </div>
       </div>
-      <div class="tile is-vertical is-3 "></div>
     </div>
-  </section>  
-
-  <!--
-  <div class="columns is-mobile is-centered">
-    <div class="column is-half">
-      <p class="bd-notification is-primary">
-        <code class="html">is-half</code><br>
-      </p>
-    </div>
-  </div>
-  -->
-
-</tbody>
-
-
+  </div> 
 </template>
