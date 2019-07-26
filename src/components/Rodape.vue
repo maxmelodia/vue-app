@@ -24,6 +24,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
+  background-color: hsl(0, 0%, 96%);
   img {
     width: 100px;
   }

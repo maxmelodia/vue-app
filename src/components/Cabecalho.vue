@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
     <div id="navbarExampleTransparentExample" class="navbar-menu is-active">
       <div class="navbar-start">
         <div class="navbar-item">
@@ -19,6 +19,5 @@
   left: 0;
   bottom: 0;
   width: 100%;
-
 }
 </style>

@@ -12,7 +12,7 @@ export default {
       butter.post
         .list({
           page: 1,
-          page_size: 10
+          page_size: 20
         })
         .then(res => {
           this.posts = res.data.data;
@@ -39,7 +39,7 @@ export default {
           <div class="card large">
             <div class="card-image">
               <figure class="image">
-                <img :src="post.featured_image" />
+                <img class="imgt" :src="post.featured_image" />
               </figure>
             </div>
             <router-link :to="'/blog/' + post.slug">
@@ -52,7 +52,7 @@ export default {
                   </div>
                   <div class="media-content">
                     <p
-                      class="title is-4 no-padding"
+                      class="title is-6 no-padding"
                     >{{post.author.first_name + ' ' + post.author.last_name}}</p>
                     <p>
                       <span class="title is-6">
@@ -62,8 +62,8 @@ export default {
                     <p class="subtitle is-6">{{post.published}}</p>
                   </div>
                 </div>
-                <div class="content">
-                  {{ post.summary }}
+                <div class="content divt">
+                  {{ post.title.substring(0,100) + '...' }}
                   <div class="background-icon">
                     <span class="icon-twitter"></span>
                   </div>
@@ -76,3 +76,15 @@ export default {
     </div>
   </div> 
 </template>
+
+<style>
+.imgt {
+    max-width:433px;
+    max-height:230px;
+}
+.divt{
+    height:100px;
+    font-size: 110%
+}
+</style>
+ 
