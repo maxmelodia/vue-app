@@ -4,10 +4,10 @@
       <p><strong>Arquitetura Front End</strong> - PUC Minas</p>
 
       <div class="soc">
-          <a href="#"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+          <a href="https://github.com/maxmelodia/"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com/"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/maxwell.roberto.5"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/maxmelodia/"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
       </div>
 
       <a href="https://buttercms.com">
